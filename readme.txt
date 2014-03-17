@@ -16,6 +16,8 @@ Bible Link uses a [bible] shortcode to parse Bible references and create links f
 
 Usage example: [bible]John 3:16[/bible] would create a link to Bible.com that looks like https://www.bible.com/bible/esv/john.3.16.esv
 
+Repo on GitHub: https://github.com/chaselivingston/biblelink
+
 == Installation ==
 
 1. Upload `biblelink.php` to the `/wp-content/plugins/` directory
