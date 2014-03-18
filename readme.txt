@@ -26,9 +26,9 @@ Repo on GitHub: https://github.com/chaselivingston/biblelink
 
 == Frequently Asked Questions ==
 
-= Why don't books with numbers work quite right? =
+= How do I link books with numbers? =
 
-I'm working with the developers at http://bible.com to try and get this sorted out.
+Don't put a space between the number and book name. For example, [bible]1Samuel 1:1[/bible] will work, but not [bible]1 Samuel 1:1[/bible].
 
 = How do I use the shortcode? =
 
