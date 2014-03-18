@@ -15,35 +15,35 @@ class CEL_Bible_Link {
 	}
 
 	public function wp_biblelink_shortcode( $atts, $content = null ) {
-		$book = strtolower( strtok($content, " ") );
-		$book_length = strlen($book);
-		$chapter = trim( substr(strtok($content, ":"), $book_length ) );
-		$chapter_length = strlen($chapter);
-		$verse = substr($content, $book_length + $chapter_length + 2);
+		$book = strtolower( strtok( $content, " " ) );
+		$book_length = strlen( $book );
+		$chapter = trim( substr( strtok( $content, ":" ), $book_length ) );
+		$chapter_length = strlen( $chapter) ;
+		$verse = substr( $content, $book_length + $chapter_length + 2 );
 
-		if ($book === '1samuel') {
+		if ( $book === '1samuel' ) {
 			$book = '1sam';
-		} elseif ($book === '2samuel') {
+		} elseif ( $book === '2samuel' ) {
 			$book = '2sam';
-		} elseif ($book === '1kings') {
+		} elseif ( $book === '1kings' ) {
 			$book = '1ki';
-		} elseif ($book === '2kings') {
+		} elseif ( $book === '2kings' ) {
 			$book = '2ki';
-		} elseif ($book === '1chronicles') {
+		} elseif ( $book === '1chronicles' ) {
 			$book = '1ch';
-		} elseif ($book === '2chronicles') {
+		} elseif ( $book === '2chronicles' ) {
 			$book = '2ch';
-		} elseif ($book === '1corinthians') {
+		} elseif ( $book === '1corinthians' ) {
 			$book = '1co';
-		} elseif ($book === '2corinthians') {
+		} elseif ( $book === '2corinthians' ) {
 			$book = '2co';
-		} elseif ($book === '1thessalonians') {
+		} elseif ( $book === '1thessalonians' ) {
 			$book = '1th';
-		} elseif ($book === '2thessalonians') {
+		} elseif ( $book === '2thessalonians' ) {
 			$book = '2th';
-		} elseif ($book === '1timothy') {
+		} elseif ( $book === '1timothy' ) {
 			$book = '1ti';
-		} elseif ($book === '2timothy') {
+		} elseif ( $book === '2timothy' ) {
 			$book = '2ti';
 		}
 
