@@ -10,10 +10,10 @@ License: GPL2
 */
 
 class CEL_Bible_Link {
-    function __construct() {
-       add_shortcode( 'bible', array( $this, 'wp_biblelink_shortcode' ) );
-    }
-    public function wp_biblelink_shortcode( $atts, $content = null ) {
+		function __construct() {
+			 add_shortcode( 'bible', array( $this, 'wp_biblelink_shortcode' ) );
+		}
+		public function wp_biblelink_shortcode( $atts, $content = null ) {
 		$book = strtolower( strtok($content, " ") );
 		$book_length = strlen($book);
 		$chapter = trim( substr(strtok($content, ":"), $book_length ) );
