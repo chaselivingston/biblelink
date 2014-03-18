@@ -10,7 +10,7 @@ License: GPL2
 */
 
 class CEL_Bible_Link {
-	function __construct() {
+	public function __construct() {
 		 add_shortcode( 'bible', array( $this, 'wp_biblelink_shortcode' ) );
 	}
 
