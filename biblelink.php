@@ -46,8 +46,8 @@ class CEL_Bible_Link {
 		} elseif ( $book === '2timothy' ) {
 			$book = '2ti';
 		}
-
-		echo '<a href="http://bible.com/bible/esv/' . $book . '.' . $chapter . '.' . $verse . '.' . 'esv' .  ' ">' . $content . '</a>';
+		$base_url = 'http://bible.com/bible/esv/';
+		echo '<a href="' . esc_url ( $base_url . $book . '.' . $chapter . '.' . $verse . '.' . 'esv' ) . ' ">'  . esc_html( $content ) . '</a>';
 	}
 }
 
