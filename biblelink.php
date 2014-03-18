@@ -15,9 +15,9 @@ class CEL_Bible_Link {
 	}
 
 	public function wp_biblelink_shortcode( $atts, $content = null ) {
-		$book = strtolower( strtok( $content, " " ) );
+		$book = strtolower( strtok( $content, ' ' ) );
 		$book_length = strlen( $book );
-		$chapter = trim( substr( strtok( $content, ":" ), $book_length ) );
+		$chapter = trim( substr( strtok( $content, ' ' ), $book_length ) );
 		$chapter_length = strlen( $chapter) ;
 		$verse = substr( $content, $book_length + $chapter_length + 2 );
 
@@ -47,7 +47,7 @@ class CEL_Bible_Link {
 			$book = '2ti';
 		}
 
-		echo "<a href='http://bible.com/bible/esv/" . $book . ".". $chapter . "." . $verse . "." . "esv" .  " '>" . $content . "</a>";
+		echo '<a href="http://bible.com/bible/esv/' . $book . '.' . $chapter . '.' . $verse . '.' . 'esv' .  ' ">' . $content . '</a>';
 	}
 }
 
