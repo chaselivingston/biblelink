@@ -17,7 +17,7 @@ class CEL_Bible_Link {
 	public function wp_biblelink_shortcode( $atts, $content = null ) {
 		$book = strtolower( strtok( $content, ' ' ) );
 		$book_length = strlen( $book );
-		$chapter = trim( substr( strtok( $content, ':' ), $book_length ) );
+		$chapter = trim( substr( strtok( $content, ' ' ), $book_length ) );
 		$chapter_length = strlen( $chapter) ;
 		$verse = substr( $content, $book_length + $chapter_length + 2 );
 
