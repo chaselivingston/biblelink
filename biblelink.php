@@ -10,10 +10,11 @@ License: GPL2
 */
 
 class CEL_Bible_Link {
-		function __construct() {
-			 add_shortcode( 'bible', array( $this, 'wp_biblelink_shortcode' ) );
-		}
-		public function wp_biblelink_shortcode( $atts, $content = null ) {
+	function __construct() {
+		 add_shortcode( 'bible', array( $this, 'wp_biblelink_shortcode' ) );
+	}
+
+	public function wp_biblelink_shortcode( $atts, $content = null ) {
 		$book = strtolower( strtok($content, " ") );
 		$book_length = strlen($book);
 		$chapter = trim( substr(strtok($content, ":"), $book_length ) );
@@ -60,7 +61,6 @@ class CEL_Bible_Link {
 		echo "<a href='http://bible.com/bible/esv/" . $book . ".". $chapter . "." . $verse . "." . "esv" .  " '>" . $content . "</a>";
 	}
 }
+
 $cel_bible_link = new CEL_Bible_Link();
-
-
 ?>
